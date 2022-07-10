@@ -1,0 +1,15 @@
+com\icecocoeci\utils\MyMapper.class
+com\icecocoeci\mapper\OrderStatusMapper.class
+com\icecocoeci\mapper\StuMapper.class
+com\icecocoeci\mapper\UserAddressMapper.class
+com\icecocoeci\mapper\ItemsImgMapper.class
+com\icecocoeci\utils\GeneratorDisplay.class
+com\icecocoeci\mapper\CarouselMapper.class
+com\icecocoeci\mapper\OrdersMapper.class
+com\icecocoeci\mapper\OrderItemsMapper.class
+com\icecocoeci\mapper\ItemsCommentsMapper.class
+com\icecocoeci\mapper\ItemsParamMapper.class
+com\icecocoeci\mapper\ItemsSpecMapper.class
+com\icecocoeci\mapper\CategoryMapper.class
+com\icecocoeci\mapper\ItemsMapper.class
+com\icecocoeci\mapper\UsersMapper.class

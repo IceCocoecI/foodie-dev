@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <context id="MysqlContext" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <!-- 修改1 通用mapper所在目录 一直填到类名 -->
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="com.icecocoeci.utils.MyMapper"/>
+        </plugin>
+
+        <!--修改2 驱动名、路径、用户名、密码-->
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/foodie?useUnicode=true&amp;characterEncoding=utf8&amp;autoReconnect=true&amp;useSSL=false&amp;serverTimezone=Asia/Shanghai&amp;allowPublicKeyRetrieval=true"
+                        userId="root"
+                        password="123456">
+        </jdbcConnection>
+
+        <!-- 修改3 对应生成的pojo所在包 -->
+        <javaModelGenerator targetPackage="com.icecocoeci.pojo" targetProject="src/main/java"/>
+
+		<!-- 修改4 对应生成的mapper所在目录 -->
+        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources"/>
+
+		<!-- 修改5 配置mapper对应的java映射 -->
+        <javaClientGenerator targetPackage="com.icecocoeci.mapper" targetProject="src/main/java" type="XMLMAPPER"/>
+
+        <!-- 修改6 数据库表 -->
+		<table tableName="carousel"></table>
+        <table tableName="category"></table>
+        <table tableName="items"></table>
+        <table tableName="items_comments"></table>
+        <table tableName="items_param"></table>
+        <table tableName="items_img"></table>
+        <table tableName="items_spec"></table>
+        <table tableName="order_items"></table>
+        <table tableName="order_status"></table>
+        <table tableName="orders"></table>
+        <table tableName="stu"></table>
+        <table tableName="user_address"></table>
+        <table tableName="users"></table>
+
+
+
+    </context>
+</generatorConfiguration>
